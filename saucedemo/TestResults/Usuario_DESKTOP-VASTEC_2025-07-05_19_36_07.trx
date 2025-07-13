@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="2c547985-4d56-433c-a716-0420a8d102e6" name="Usuario@DESKTOP-VASTEC 2025-07-05 19:36:07" runUser="DESKTOP-VASTEC\Usuario" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-07-05T19:36:07.5230763-05:00" queuing="2025-07-05T19:36:07.5230764-05:00" start="2025-07-05T19:36:00.4976366-05:00" finish="2025-07-05T19:36:07.5287184-05:00" />
+  <TestSettings name="default" id="40fd4b18-8a23-4e42-8fe9-5c53470c0d04">
+    <Deployment runDeploymentRoot="Usuario_DESKTOP-VASTEC_2025-07-05_19_36_07" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="cb2b91fc-09b4-4da6-bed6-141be5895022" testId="b2e8740a-0620-e5a2-fb3e-2efdd11ab2c9" testName="Test1" computerName="DESKTOP-VASTEC" duration="00:00:06.6229530" startTime="2025-07-05T19:36:00.8346992-05:00" endTime="2025-07-05T19:36:07.4576012-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cb2b91fc-09b4-4da6-bed6-141be5895022">
+      <Output>
+        <ErrorInfo>
+          <Message>OpenQA.Selenium.WebDriverException : invalid session id: session deleted as the browser has closed the connection&#xD;
+from disconnected: not connected to DevTools&#xD;
+  (Session info: MicrosoftEdge=138.0.3351.65)</Message>
+          <StackTrace>   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)&#xD;
+   at OpenQA.Selenium.WebDriver.ExecuteAsync(String driverCommandToExecute, Dictionary`2 parameters)&#xD;
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)&#xD;
+   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)&#xD;
+   at OpenQA.Selenium.By.&lt;.ctor&gt;b__6_0(ISearchContext context)&#xD;
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)&#xD;
+   at OpenQA.Selenium.WebDriver.FindElement(By by)&#xD;
+   at saucedemo.Pages.sel_productos.&lt;&gt;c.&lt;espera_carga_sel&gt;b__12_0(IWebDriver drv) in C:\vs\vs2022\testautomatizado\DotnetSelenium\saucedemo\Pages\2sel_productos.cs:line 34&#xD;
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition, CancellationToken token)&#xD;
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)&#xD;
+   at saucedemo.Pages.sel_productos.espera_carga_sel() in C:\vs\vs2022\testautomatizado\DotnetSelenium\saucedemo\Pages\2sel_productos.cs:line 34&#xD;
+   at saucedemo.Tests.Test1() in C:\vs\vs2022\testautomatizado\DotnetSelenium\saucedemo\UnitTest1.cs:line 40&#xD;
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Test1" storage="c:\vs\vs2022\testautomatizado\dotnetselenium\saucedemo\bin\release\net8.0\saucedemo.dll" id="b2e8740a-0620-e5a2-fb3e-2efdd11ab2c9">
+      <Execution id="cb2b91fc-09b4-4da6-bed6-141be5895022" />
+      <TestMethod codeBase="C:\vs\vs2022\testautomatizado\DotnetSelenium\saucedemo\bin\Release\net8.0\saucedemo.dll" adapterTypeName="executor://nunit3testexecutor/" className="saucedemo.Tests" name="Test1" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="b2e8740a-0620-e5a2-fb3e-2efdd11ab2c9" executionId="cb2b91fc-09b4-4da6-bed6-141be5895022" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Resultados sin formato de lista" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Todos los resultados cargados" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" passed="0" failed="1" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>NUnit Adapter 4.5.0.0: Test execution started&#xD;
+Running all tests in C:\vs\vs2022\testautomatizado\DotnetSelenium\saucedemo\bin\Release\net8.0\saucedemo.dll&#xD;
+   NUnit3TestExecutor discovered 1 of 1 NUnit test cases using Current Discovery mode, Non-Explicit run&#xD;
+Starting Microsoft Edge WebDriver 138.0.3351.65 (81e3782c3ab423e3e82c7e8495ffe12f403fb50a) on port 49283&#xD;
+To submit feedback, report a bug, or suggest new features, please visit https://github.com/MicrosoftEdge/EdgeWebDriver&#xD;
+Only local connections are allowed.&#xD;
+Please see https://aka.ms/WebDriverSecurity for suggestions on keeping Microsoft Edge WebDriver safe.&#xD;
+msedgedriver was started successfully on port 49283.&#xD;
+NUnit Adapter 4.5.0.0: Test execution complete&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>
