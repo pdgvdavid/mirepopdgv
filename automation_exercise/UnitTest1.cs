@@ -72,7 +72,7 @@ namespace automation_exercise
             pagina_confirma.confirma();
 
             System.Threading.Thread.Sleep(5000);
-            Assert.Pass();
+            Assert.Fail();
         }
 
 
