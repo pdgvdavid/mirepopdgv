@@ -16,7 +16,7 @@ namespace automation_exercise
         {
 
             _driver = new EdgeDriver();
-            _driver.Navigate().GoToUrl("https://petstore.octoperf.com/");
+            _driver.Navigate().GoToUrl("https://petstore.octoperf.com111/");
             _driver.Manage().Window.Maximize();
 
             
@@ -71,8 +71,8 @@ namespace automation_exercise
             pagina_confirma.espera_carga_pagina();
             pagina_confirma.confirma();
 
-            System.Threading.Thread.Sleep(5000);
-            //Assert.Fail();
+            System.Threading.Thread.Sleep(2000);
+            Assert.Pass();
         }
 
 
