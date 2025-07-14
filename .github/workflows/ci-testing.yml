@@ -27,7 +27,7 @@ jobs:
 
     - name: 🧪 Run NUnit tests
       shell: pwsh
-      #run: dotnet test --no-build --verbosity normal
-      run: |
-          dotnet test --no-build --verbosity detailed
-          if ($LASTEXITCODE -ne 0) { exit 1 }
+      run: dotnet test --no-build --verbosity normal
+      #run: |
+       #   dotnet test --no-build --verbosity detailed
+        #  if ($LASTEXITCODE -ne 0) { exit 1 }
