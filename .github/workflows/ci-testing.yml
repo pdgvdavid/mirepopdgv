@@ -26,7 +26,7 @@ jobs:
       run: dotnet build --configuration Release
 
     - name: 🧪 Run NUnit tests
-      shell: pwsh
+      #shell: pwsh
       run: dotnet test --no-build --verbosity normal
       #run: |
        #   dotnet test --no-build --verbosity detailed
