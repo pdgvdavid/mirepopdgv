@@ -16,7 +16,7 @@ namespace automation_exercise
         {
 
             _driver = new EdgeDriver();
-            _driver.Navigate().GoToUrl("https://petstore.octoperf.comapdgv/");
+            _driver.Navigate().GoToUrl("https://petstore.octoperf.com/");
             _driver.Manage().Window.Maximize();
 
             

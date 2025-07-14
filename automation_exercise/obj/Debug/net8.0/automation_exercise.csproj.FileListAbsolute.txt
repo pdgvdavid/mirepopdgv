@@ -206,3 +206,4 @@ C:\aCICD\automation_exercise\obj\Debug\net8.0\refint\automation_exercise.dll
 C:\aCICD\automation_exercise\obj\Debug\net8.0\automation_exercise.pdb
 C:\aCICD\automation_exercise\obj\Debug\net8.0\automation_exercise.genruntimeconfig.cache
 C:\aCICD\automation_exercise\obj\Debug\net8.0\ref\automation_exercise.dll
+C:\aCICD\automation_exercise\obj\Debug\net8.0\automation_exercise.sourcelink.json

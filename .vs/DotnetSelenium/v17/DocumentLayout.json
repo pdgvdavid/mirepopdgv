@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\aCICD\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B92A2325-4D4E-4A24-A6B5-501E5606A7A9}|automation_exercise\\automation_exercise.csproj|c:\\acicd\\automation_exercise\\pages\\fcart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B92A2325-4D4E-4A24-A6B5-501E5606A7A9}|automation_exercise\\automation_exercise.csproj|solutionrelative:automation_exercise\\pages\\fcart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B92A2325-4D4E-4A24-A6B5-501E5606A7A9}|automation_exercise\\automation_exercise.csproj|c:\\acicd\\automation_exercise\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B92A2325-4D4E-4A24-A6B5-501E5606A7A9}|automation_exercise\\automation_exercise.csproj|solutionrelative:automation_exercise\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B92A2325-4D4E-4A24-A6B5-501E5606A7A9}|automation_exercise\\automation_exercise.csproj|c:\\acicd\\automation_exercise\\pages\\fcart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B92A2325-4D4E-4A24-A6B5-501E5606A7A9}|automation_exercise\\automation_exercise.csproj|solutionrelative:automation_exercise\\pages\\fcart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B92A2325-4D4E-4A24-A6B5-501E5606A7A9}|automation_exercise\\automation_exercise.csproj|c:\\acicd\\automation_exercise\\pages\\gdatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,11 +22,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Fcart.cs",
               "DocumentMoniker": "C:\\aCICD\\automation_exercise\\Pages\\Fcart.cs",
               "RelativeDocumentMoniker": "automation_exercise\\Pages\\Fcart.cs",
@@ -51,15 +51,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "UnitTest1.cs",
               "DocumentMoniker": "C:\\aCICD\\automation_exercise\\UnitTest1.cs",
               "RelativeDocumentMoniker": "automation_exercise\\UnitTest1.cs",
               "ToolTip": "C:\\aCICD\\automation_exercise\\UnitTest1.cs",
               "RelativeToolTip": "automation_exercise\\UnitTest1.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAowEkAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T02:22:48.439Z"
+              "WhenOpened": "2025-07-08T02:22:48.439Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
