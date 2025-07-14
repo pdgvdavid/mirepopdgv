@@ -34,8 +34,7 @@
               "RelativeToolTip": "automation_exercise\\Pages\\Fcart.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAcwDAAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T22:01:08.808Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-11T22:01:08.808Z"
             },
             {
               "$type": "Document",
@@ -57,7 +56,7 @@
               "RelativeDocumentMoniker": "automation_exercise\\UnitTest1.cs",
               "ToolTip": "C:\\aCICD\\automation_exercise\\UnitTest1.cs",
               "RelativeToolTip": "automation_exercise\\UnitTest1.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAABFAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-08T02:22:48.439Z",
               "EditorCaption": ""
