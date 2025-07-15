@@ -25,5 +25,11 @@ jobs:
     - name: 🛠️ Build project
       run: dotnet build test\testsolu --configuration Release
 
+    - name: 🚀 Instala http-server
+      run: npm install -g http-server
+
+    - name: 📂 Sirve archivos fuente
+      run: http-server ./ --port 8080 &
+
     - name: 🧪 Run NUnit tests
       run: dotnet test test\testsolu --no-build --verbosity normal

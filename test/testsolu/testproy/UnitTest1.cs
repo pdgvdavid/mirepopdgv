@@ -10,7 +10,7 @@ namespace testproy
         public void Setup()
         {
             _driver = new EdgeDriver();
-            _driver.Navigate().GoToUrl("C:\\aCICD\\introduccion.html");
+            _driver.Navigate().GoToUrl("http://localhost:8080/introduccion.html");
             _driver.Manage().Window.Maximize();
            
         }
