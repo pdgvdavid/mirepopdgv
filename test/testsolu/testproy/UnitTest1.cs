@@ -19,6 +19,7 @@ namespace testproy
         public void Test1()
         {
             bool flag = false;
+            System.Threading.Thread.Sleep(3000);
             IWebElement input1 = _driver.FindElement(By.Id("multiplicando"));
             IWebElement input2 = _driver.FindElement(By.Id("multiplicador"));
             IWebElement botoncalcula = _driver.FindElement(By.Id("btnproducto"));
