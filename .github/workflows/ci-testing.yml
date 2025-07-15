@@ -32,10 +32,11 @@ jobs:
       run: http-server ./ --port 8080 &
 
     - name: 💤 Espera a que el servidor esté listo
-      run: timeout 3      
+      shell: pwsh
+      run: Start-Sleep -Seconds 3   
 
     - name: ✅ Verifica que el HTML esté accesible
-      run: curl http://localhost:8080/introduccion.html
+      run: curl --fail http://localhost:8080/introduccion.html
 
     - name: 🧪 Run NUnit tests
       run: dotnet test test\testsolu --no-build --verbosity normal
