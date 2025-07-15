@@ -31,6 +31,9 @@ jobs:
     - name: 📂 Sirve archivos fuente
       run: http-server ./ --port 8080 &
 
+    - name: 💤 Espera a que el servidor esté listo
+      run: timeout 3      
+
     - name: ✅ Verifica que el HTML esté accesible
       run: curl http://localhost:8080/introduccion.html
 
