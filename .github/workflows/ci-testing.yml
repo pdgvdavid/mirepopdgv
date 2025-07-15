@@ -23,7 +23,7 @@ jobs:
       run: dotnet restore test\testsolu
 
     - name: 🛠️ Build project
-      run: dotnet build --configuration Release
+      run: dotnet build test\testsolu --configuration Release
 
     - name: 🧪 Run NUnit tests
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test test\testsolu --no-build --verbosity normal
