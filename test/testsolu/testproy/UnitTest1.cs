@@ -12,8 +12,11 @@ namespace testproy
         {
             _driver = new EdgeDriver();
             _driver.Navigate().GoToUrl("http://localhost:8080/introduccion.html");
-            //_driver.Navigate().GoToUrl("C:\\aCICD\\introduccion.html");
-            Console.WriteLine(_driver.PageSource);
+           // _driver.Navigate().GoToUrl("C:\\aCICD\\introduccion.html");
+            //Console.WriteLine(_driver.PageSource);
+            TestContext.WriteLine("=== PAGE SOURCE ===");
+            TestContext.WriteLine(_driver.PageSource);
+            TestContext.WriteLine("=== END PAGE SOURCE ===");
             _driver.Manage().Window.Maximize();
            
         }
