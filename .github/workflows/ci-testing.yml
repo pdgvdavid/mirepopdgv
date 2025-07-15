@@ -20,7 +20,7 @@ jobs:
         dotnet-version: '8.0.x' # ajusta según la versión que uses
 
     - name: 📦 Restore dependencies
-      run: dotnet restore
+      run: dotnet restore test\testsolu
 
     - name: 🛠️ Build project
       run: dotnet build --configuration Release
