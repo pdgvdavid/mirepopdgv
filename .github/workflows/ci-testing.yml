@@ -31,5 +31,8 @@ jobs:
     - name: 📂 Sirve archivos fuente
       run: http-server ./ --port 8080 &
 
+    - name: ✅ Verifica que el HTML esté accesible
+      run: curl http://localhost:8080/introduccion.html
+
     - name: 🧪 Run NUnit tests
       run: dotnet test test\testsolu --no-build --verbosity normal
