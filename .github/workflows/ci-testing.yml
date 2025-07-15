@@ -28,10 +28,12 @@ jobs:
     - name: 🚀 Instala http-server
       run: npm install -g http-server
 
+   # - name: 📂 Sirve archivos fuente
+   #   shell: pwsh
+   #   run: |
+   #     Start-Process http-server -ArgumentList "--port 8080" -NoNewWindow
     - name: 📂 Sirve archivos fuente
-      shell: pwsh
-      run: |
-        Start-Process http-server -ArgumentList "--port 8080" -NoNewWindow
+      run: start /B http-server ./ --port 8080
 
     - name: 💤 Espera a que el servidor esté listo
       shell: pwsh
