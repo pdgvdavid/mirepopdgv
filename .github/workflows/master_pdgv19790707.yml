@@ -21,9 +21,9 @@ jobs:
       - name: Upload static files
         run: |
           mkdir deploy
-          cp -r * deploy
+          Get-ChildItem -Path . -Exclude deploy | Copy-Item -Destination deploy -Recurse
           echo "Archivos copiados para despliegue"
-
+          
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
         with:
