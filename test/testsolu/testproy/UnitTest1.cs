@@ -13,13 +13,13 @@ namespace testproy
         {
             _driver = new EdgeDriver();
            //_driver = new ChromeDriver();
-            _driver.Navigate().GoToUrl("D:\\a\\mirepopdgv\\mirepopdgv\\introduccion.html");
+            _driver.Navigate().GoToUrl("https://pdgv1979.azurewebsites.net/");
            // _driver.Navigate().GoToUrl("C:\\aCICD\\introduccion.html");
 
 
-            TestContext.WriteLine("=== PAGE SOURCE ===");
-            TestContext.WriteLine(_driver.PageSource);
-            TestContext.WriteLine("=== END PAGE SOURCE ===");
+           // TestContext.WriteLine("=== PAGE SOURCE ===");
+           // TestContext.WriteLine(_driver.PageSource);
+            //TestContext.WriteLine("=== END PAGE SOURCE ===");
             _driver.Manage().Window.Maximize();
            
         }
