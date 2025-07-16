@@ -13,10 +13,10 @@ namespace testproy
             _driver = new EdgeDriver();
           //  _driver.Navigate().GoToUrl("http://localhost:8080/introduccion.html");
            // _driver.Navigate().GoToUrl("C:\\aCICD\\introduccion.html");
-string path = Path.GetFullPath(@"../../../introduccion.html");
-_driver.Navigate().GoToUrl("file:///" + path.Replace("\\", "/"));           
-TestContext.WriteLine("Ruta HTML: " + path);
-            //Console.WriteLine(_driver.PageSource);
+string repoRoot = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
+string htmlPath = Path.Combine(repoRoot, "introduccion.html");
+_driver.Navigate().GoToUrl("file:///" + htmlPath.Replace("\\", "/"));
+TestContext.WriteLine("Ruta generada: " + htmlPath);
             TestContext.WriteLine("=== PAGE SOURCE ===");
             TestContext.WriteLine(_driver.PageSource);
             TestContext.WriteLine("=== END PAGE SOURCE ===");
