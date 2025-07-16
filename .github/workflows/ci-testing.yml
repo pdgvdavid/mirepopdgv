@@ -28,6 +28,12 @@ jobs:
     - name: 🚀 Instala dotnet-serve
       run: dotnet tool install --global dotnet-serve
 
+    - name: 🔧 Instala Chrome
+      run: choco install googlechrome --ignore-checksums
+
+    - name: 🧱 Instala ChromeDriver
+      run: choco install chromedriver --version=LATEST      
+
     - name: 📂 Sirve archivos fuente
       run: dotnet-serve --directory . --port 8080 --quiet &
       shell: bash

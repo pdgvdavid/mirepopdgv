@@ -1,6 +1,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.Support.UI;
+using OpenQA.Selenium.Chrome;
 
 namespace testproy
 {
@@ -10,7 +11,8 @@ namespace testproy
         [SetUp]
         public void Setup()
         {
-            _driver = new EdgeDriver();
+           // _driver = new EdgeDriver();
+           _driver = new ChromeDriver();
             _driver.Navigate().GoToUrl("http://localhost:8080/introduccion.html");
            // _driver.Navigate().GoToUrl("C:\\aCICD\\introduccion.html");
 
