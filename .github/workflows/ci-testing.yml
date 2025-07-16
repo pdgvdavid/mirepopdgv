@@ -39,5 +39,28 @@ jobs:
     - name: 🛠️ Build project
       run: dotnet build test\testsolu --configuration Release
 
+    - name: 🌐 Verificar disponibilidad del sitio
+      run: |
+          $url = "https://pdgv1979.azurewebsites.net"
+          $maxRetries = 5
+          $success = $false
+          for ($i = 0; $i -lt $maxRetries; $i++) {
+          try {
+          $response = Invoke-WebRequest -Uri $url -UseBasicParsing -TimeoutSec 10
+          if ($response.StatusCode -eq 200) {
+          echo "✅ Sitio disponible."
+          $success = $true
+          break
+          }
+          } catch {
+          echo "⏳ Esperando sitio... intento $($i+1)"
+          Start-Sleep -Seconds 5
+          }
+          }
+           if (-not $success) {
+             throw "❌ El sitio no respondió después de $maxRetries intentos."
+           }
+
+
     - name: 🧪 Run NUnit tests
       run: dotnet test  test\testsolu --no-build --verbosity normal
