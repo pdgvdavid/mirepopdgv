@@ -11,8 +11,10 @@ namespace testproy
         public void Setup()
         {
             _driver = new EdgeDriver();
-            _driver.Navigate().GoToUrl("http://localhost:8080/introduccion.html");
+          //  _driver.Navigate().GoToUrl("http://localhost:8080/introduccion.html");
            // _driver.Navigate().GoToUrl("C:\\aCICD\\introduccion.html");
+string path = Path.GetFullPath(@"../../../introduccion.html");
+_driver.Navigate().GoToUrl("file:///" + path.Replace("\\", "/"));           
             //Console.WriteLine(_driver.PageSource);
             TestContext.WriteLine("=== PAGE SOURCE ===");
             TestContext.WriteLine(_driver.PageSource);
