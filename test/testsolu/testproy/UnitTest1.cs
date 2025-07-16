@@ -15,6 +15,7 @@ namespace testproy
            // _driver.Navigate().GoToUrl("C:\\aCICD\\introduccion.html");
 string path = Path.GetFullPath(@"../../../introduccion.html");
 _driver.Navigate().GoToUrl("file:///" + path.Replace("\\", "/"));           
+TestContext.WriteLine("Ruta HTML: " + path);
             //Console.WriteLine(_driver.PageSource);
             TestContext.WriteLine("=== PAGE SOURCE ===");
             TestContext.WriteLine(_driver.PageSource);
