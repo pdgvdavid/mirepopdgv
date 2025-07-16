@@ -11,6 +11,13 @@ jobs:
     runs-on: windows-latest
 
     steps:
+
+    - name: 🔧 Instala Chrome
+      run: choco install googlechrome --ignore-checksums
+
+    - name: 🧱 Instala ChromeDriver
+      run: choco install chromedriver   
+
     - name: 🧲 Checkout repo
       uses: actions/checkout@v3
 
@@ -28,13 +35,7 @@ jobs:
     - name: 🚀 Instala dotnet-serve
       run: dotnet tool install --global dotnet-serve
 
-    - name: 🔧 Instala Chrome
-      run: choco install googlechrome --ignore-checksums
-
-    - name: 🧱 Instala ChromeDriver
-      run: choco install chromedriver     
-
-    - name: 📂 Sirve archivos fuente
+      - name: 📂 Sirve archivos fuente
       run: dotnet-serve --directory . --port 8080 --quiet &
       shell: bash
 
