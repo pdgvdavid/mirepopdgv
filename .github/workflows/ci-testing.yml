@@ -21,6 +21,7 @@ jobs:
         package: .  # carpeta raíz del proyecto (donde está informacion.html)
 
   build-and-test:
+    needs: build-and-deploy  # 👈 Esto fuerza a esperar que se complete el job anterior  
     runs-on: windows-latest
 
     steps:
