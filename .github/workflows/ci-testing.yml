@@ -1,44 +1,21 @@
-name: Run Selenium NUnit Tests
+name: Deploy to Azure Web App
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches:
+      - master  # o main, según tu rama principal
 
 jobs:
-  build-and-test:
+  build-and-deploy:
     runs-on: windows-latest
 
     steps:
-
     - name: 🧲 Checkout repo
       uses: actions/checkout@v3
 
-    - name: 🔧 Setup .NET
-      uses: actions/setup-dotnet@v3
+    - name: 🚀 Deploy to Azure Web App
+      uses: azure/webapps-deploy@v3
       with:
-        dotnet-version: '8.0.x' # ajusta según la versión que uses
-
-    - name: 📦 Restore dependencies
-      run: dotnet restore test\testsolu
-
-    - name: 🛠️ Build project
-      run: dotnet build test\testsolu --configuration Release
-
-    #- name: 🚀 Instala dotnet-serve
-      #run: dotnet tool install --global dotnet-serve
-
-    #- name: 📂 Sirve archivos fuente
-     # run: dotnet-serve --directory . --port 8080 --quiet &
-     # shell: bash
-
-    #- name: 💤 Espera a que el servidor esté listo
-     # shell: pwsh
-     # run: Start-Sleep -Seconds 5
-
-    #- name: ✅ Verifica que el HTML esté accesible
-    #  run: curl --fail http://localhost:8080/introduccion.html
-
-    - name: 🧪 Run NUnit tests
-      run: dotnet test test\testsolu --no-build --verbosity normal
+        app-name: pdgv1979  # nombre exacto de tu Web App
+        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+        package: .  # carpeta raíz del proyecto (donde está informacion.html)
