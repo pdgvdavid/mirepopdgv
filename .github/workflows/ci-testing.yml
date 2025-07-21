@@ -13,12 +13,16 @@ jobs:
     - name: 🧲 Checkout repo
       uses: actions/checkout@v3
 
+    - name: 🔧 Create ZIP excluding /test
+      run: |
+        powershell -command "Compress-Archive -Path * -DestinationPath deploy.zip -Exclude test"
+
     - name: 🚀 Deploy to Azure Web App
       uses: azure/webapps-deploy@v3
       with:
         app-name: pdgv1979  # nombre exacto de tu Web App
         publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-        package: .  # carpeta raíz del proyecto (donde está informacion.html)
+        package: deploy.zip  # carpeta raíz del proyecto (donde está informacion.html)
 
   build-and-test:
     needs: build-and-deploy  # 👈 Esto fuerza a esperar que se complete el job anterior  
