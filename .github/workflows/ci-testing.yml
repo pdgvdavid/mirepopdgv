@@ -13,9 +13,19 @@ jobs:
     - name: 🧲 Checkout repo
       uses: actions/checkout@v3
 
-    - name: 🔧 Create ZIP excluding /test
+    - name: 🧼 Crear carpeta temporal sin /test
       run: |
-        powershell -command "Compress-Archive -Path * -DestinationPath deploy.zip -Exclude test"
+        powershell -command "
+          Remove-Item -Recurse -Force tempDeploy -ErrorAction SilentlyContinue;
+          New-Item -ItemType Directory -Path tempDeploy;
+          Get-ChildItem -Path . -Exclude 'test','tempDeploy','.git','.github' | 
+            ForEach-Object {
+              Copy-Item -Path $_.FullName -Destination 'tempDeploy' -Recurse
+            }
+        "
+
+    - name: 📦 Crear ZIP
+      run: powershell -command "Compress-Archive -Path tempDeploy\* -DestinationPath deploy.zip"
 
     - name: 🚀 Deploy to Azure Web App
       uses: azure/webapps-deploy@v3
