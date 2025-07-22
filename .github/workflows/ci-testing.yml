@@ -15,14 +15,14 @@ jobs:
 
     - name: 🧼 Crear carpeta temporal sin /test
       run: |
-       powershell -command "
-        Remove-Item -Recurse -Force tempDeploy -ErrorAction SilentlyContinue;
-        New-Item -ItemType Directory -Path tempDeploy;
-        $items = Get-ChildItem -Path . -Exclude 'test','tempDeploy','.git','.github';
-         foreach ($item in $items) {
-        Copy-Item -Path $item.FullName -Destination 'tempDeploy' -Recurse -Force
-        }
-       "
+        powershell -command "
+          Remove-Item -Recurse -Force tempDeploy -ErrorAction SilentlyContinue;
+          New-Item -ItemType Directory -Path tempDeploy;
+          $items = Get-ChildItem -Path . -Exclude 'test','tempDeploy','.git','.github';
+          foreach ($item in $items) {
+            Copy-Item -Path $item.FullName -Destination 'tempDeploy' -Recurse -Force
+          }
+        "
 
 
     - name: 📦 Crear ZIP
