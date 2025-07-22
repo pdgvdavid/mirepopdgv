@@ -14,15 +14,16 @@ jobs:
       uses: actions/checkout@v3
 
     - name: 🧼 Crear carpeta temporal sin /test
-      run: |
+       run: |
         powershell -command "
-          Remove-Item -Recurse -Force tempDeploy -ErrorAction SilentlyContinue;
-          New-Item -ItemType Directory -Path tempDeploy;
-          Get-ChildItem -Path . -Exclude 'test','tempDeploy','.git','.github' | 
-            ForEach-Object {
-              Copy-Item -Path $_.FullName -Destination 'tempDeploy' -Recurse
-            }
-        "
+        Remove-Item -Recurse -Force tempDeploy -ErrorAction SilentlyContinue;
+        New-Item -ItemType Directory -Path tempDeploy;
+        Get-ChildItem -Path . -Exclude 'test','tempDeploy','.git','.github' |
+        ForEach-Object {
+          Copy-Item -Path $_.FullName -Destination 'tempDeploy' -Recurse -Force
+        }
+    "
+
 
     - name: 📦 Crear ZIP
       run: powershell -command "Compress-Archive -Path tempDeploy\* -DestinationPath deploy.zip"
