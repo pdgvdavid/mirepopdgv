@@ -19,9 +19,7 @@ jobs:
           Remove-Item -Recurse -Force tempDeploy -ErrorAction SilentlyContinue;
           New-Item -ItemType Directory -Path tempDeploy;
           Get-ChildItem -Path . -Exclude 'test','tempDeploy','.git','.github' |
-            ForEach-Object {
-              Copy-Item -Path $_.FullName -Destination 'tempDeploy' -Recurse -Force
-            }
+            ForEach-Object { Copy-Item -Path $_.FullName -Destination 'tempDeploy' -Recurse -Force }
         "
 
 
